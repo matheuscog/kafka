@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/producer/send")
+@RequestMapping("/producer")
 @RequiredArgsConstructor
 public class ProducerController {
 
     private final ProducerService service;
 
-    @PostMapping
+    @PostMapping("/send")
     public ResponseEntity<?> sendMessage(@RequestBody String message){
         service.sendMessage(message);
         return ResponseEntity.status(HttpStatus.CREATED).build();

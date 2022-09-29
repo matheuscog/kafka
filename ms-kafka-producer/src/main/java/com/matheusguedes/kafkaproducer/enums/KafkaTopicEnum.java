@@ -3,8 +3,8 @@ package com.matheusguedes.kafkaproducer.enums;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-@AllArgsConstructor
 @Getter
+@AllArgsConstructor
 public enum KafkaTopicEnum {
 
     MAIN_TOPIC("main-topic");

@@ -20,7 +20,7 @@ public class StringProducerFactoryConfig {
 
     @Bean
     public ProducerFactory<String, String> producerFactory(){
-        HashMap<String, Object> configs = new HashMap<>();
+        var configs = new HashMap<String, Object>();
         configs.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, properties.getBootstrapServers());
         configs.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
         configs.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
