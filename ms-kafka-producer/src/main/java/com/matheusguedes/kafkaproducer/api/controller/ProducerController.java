@@ -19,7 +19,7 @@ public class ProducerController {
     @PostMapping("/send")
     public ResponseEntity<?> sendMessage(@RequestBody String message){
         service.sendMessage(message);
-        return ResponseEntity.status(HttpStatus.CREATED).build();
+        return ResponseEntity.status(HttpStatus.ACCEPTED).build();
     }
 
 }
