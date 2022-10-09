@@ -1,9 +1,9 @@
 server:
-  port: 8100
+  port: ${PORT:8100}
 
 spring:
   datasource:
-    url: jdbc:h2:mem:testdb
+    url: jdbc:h2:mem:test_db
     driverClassName: org.h2.Driver
     username: sa
     password: 123
@@ -15,4 +15,4 @@ spring:
       path: /h2
   kafka:
     producer:
-      bootstrap-servers: localhost:29092
+      bootstrap-servers: ${KAFKA_HOST:localhost:29092}
